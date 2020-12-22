@@ -1,4 +1,5 @@
 import React from "react";
+import "./scss/main.css";
 
 const App = () => {
   const alphabet = [
@@ -34,7 +35,11 @@ const App = () => {
     <div className="App">
       <h1>Idioms</h1>
       <h2>Choose a letter</h2>
-      {alphabet.map((letter) => letter)}
+      <div className="letters">
+        {alphabet.map((letter) => (
+          <div className="letter">{letter}</div>
+        ))}
+      </div>
     </div>
   );
 };

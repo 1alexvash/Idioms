@@ -2,4 +2,30 @@
 @import "responsive";
 
 .App {
+  font-family: Tahoma;
+  font-size: 20px;
+  width: 360px;
+  margin: auto;
+  h1 {
+    font-size: 32px;
+    font-weight: normal;
+  }
+  h2 {
+    margin: 20px 0;
+    font-size: 24px;
+    font-weight: normal;
+  }
+  .letters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .letter {
+      cursor: pointer;
+      border: 1px solid black;
+      margin: 8px;
+      padding: 12px;
+      border-radius: 4px;
+      background: linear-gradient(darken(white, 5%), grey);
+    }
+  }
 }

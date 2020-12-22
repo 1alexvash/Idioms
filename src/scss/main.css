@@ -22,117 +22,39 @@ input {
 
 .App {
   font-family: Tahoma;
-}
-
-.App .Computer {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  overflow-x: scroll;
-  overflow-y: visible;
-  overflow: visible;
-  border: 1px solid black;
-  border-radius: 4px;
-  width: 600px;
-}
-
-.App .Computer .card {
-  width: 16.67%;
-}
-
-.App .Computer .card img {
-  width: 100%;
-}
-
-.App .Battle-Field {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 600px;
-  height: 300px;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  -webkit-box-shadow: 1px 2px 5px 1px #444;
-          box-shadow: 1px 2px 5px 1px #444;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.App .Battle-Field .card {
-  width: 16.7%;
-}
-
-.App .Battle-Field .card img {
-  width: 100%;
-}
-
-.App .Battle-Field .turn {
-  position: absolute;
-  bottom: 0;
   font-size: 20px;
-  font-style: italic;
-  font-weight: bold;
+  width: 360px;
+  margin: auto;
 }
 
-.App .Cards-Deck {
-  position: absolute;
-  left: 50px;
-  top: 50px;
-  width: 200px;
+.App h1 {
+  font-size: 32px;
+  font-weight: normal;
 }
 
-.App .Cards-Deck .card {
-  position: absolute;
+.App h2 {
+  margin: 20px 0;
+  font-size: 24px;
+  font-weight: normal;
 }
 
-.App .Cards-Deck .card img {
-  width: 100%;
-}
-
-.App .Player {
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
+.App .letters {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  overflow-x: scroll;
-  overflow-y: visible;
-  overflow: visible;
-  border: 1px solid black;
-  border-radius: 4px;
-  width: 600px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.App .Player .card {
-  width: 16.67%;
+.App .letters .letter {
   cursor: pointer;
-  -webkit-transition: opacity 1s;
-  transition: opacity 1s;
-}
-
-.App .Player .card.active {
-  opacity: 0;
-  cursor: auto;
-}
-
-.App .Player .card:hover {
-  z-index: 1;
-}
-
-.App .Player .card:hover img {
-  -webkit-box-shadow: 0 0 10px 2px deepskyblue;
-          box-shadow: 0 0 10px 2px deepskyblue;
-}
-
-.App .Player .card img {
-  width: 100%;
+  border: 1px solid black;
+  margin: 8px;
+  padding: 12px;
+  border-radius: 4px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(grey));
+  background: linear-gradient(#f2f2f2, grey);
 }
