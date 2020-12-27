@@ -64,10 +64,17 @@ input {
   padding: 10px 20px;
   background: -webkit-gradient(linear, left top, left bottom, from(#e5e5e5), to(white));
   background: linear-gradient(#e5e5e5, white);
-  -webkit-box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.8);
-          box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.8);
+          box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.8);
   border-radius: 4px;
   font-size: 16px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.App .idioms .idiom:hover {
+  -webkit-box-shadow: 1px 2px 7px black;
+          box-shadow: 1px 2px 7px black;
 }
 
 .App .idioms .idiom .name {
