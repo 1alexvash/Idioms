@@ -2,7 +2,7 @@
 @import "responsive";
 
 .App {
-  font-family: Tahoma;
+  font-family: Arial;
   font-size: 20px;
   width: 360px;
   margin: auto;
@@ -26,6 +26,23 @@
       padding: 12px;
       border-radius: 4px;
       background: linear-gradient(darken(white, 5%), grey);
+    }
+  }
+  .idioms {
+    .idiom {
+      margin: 15px 0;
+      padding: 15px;
+      background: linear-gradient(lighten(lightgrey, 7%), white);
+      box-shadow: 1px 2px 3px rgba(black, 0.5);
+      border: 1px solid black;
+      border-radius: 4px;
+      font-size: 16px;
+      .name {
+        margin-bottom: 10px;
+      }
+      .example {
+        font-style: italic;
+      }
     }
   }
 }

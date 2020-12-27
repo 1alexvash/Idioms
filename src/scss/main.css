@@ -21,7 +21,7 @@ input {
 }
 
 .App {
-  font-family: Tahoma;
+  font-family: Arial;
   font-size: 20px;
   width: 360px;
   margin: auto;
@@ -57,4 +57,24 @@ input {
   border-radius: 4px;
   background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(grey));
   background: linear-gradient(#f2f2f2, grey);
+}
+
+.App .idioms .idiom {
+  margin: 15px 0;
+  padding: 15px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e5e5e5), to(white));
+  background: linear-gradient(#e5e5e5, white);
+  -webkit-box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+          box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+  border: 1px solid black;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.App .idioms .idiom .name {
+  margin-bottom: 10px;
+}
+
+.App .idioms .idiom .example {
+  font-style: italic;
 }

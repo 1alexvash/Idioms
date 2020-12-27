@@ -57,7 +57,9 @@ const App = () => {
         {letter === "Z"
           ? idioms.map((idiom) => (
               <div className="idiom" key={idiom.name}>
-                <div className="name">{idiom.name}</div>
+                <div className="name">
+                  <b>{idiom.name.split("-")[0]}</b> - {idiom.name.split("-")[1]}
+                </div>
                 <div className="example">{idiom.example}</div>
               </div>
             ))
