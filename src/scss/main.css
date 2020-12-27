@@ -60,13 +60,12 @@ input {
 }
 
 .App .idioms .idiom {
-  margin: 15px 0;
-  padding: 15px;
+  margin: 20px 0;
+  padding: 10px 20px;
   background: -webkit-gradient(linear, left top, left bottom, from(#e5e5e5), to(white));
   background: linear-gradient(#e5e5e5, white);
-  -webkit-box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
-          box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
-  border: 1px solid black;
+  -webkit-box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.8);
+          box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.8);
   border-radius: 4px;
   font-size: 16px;
 }
