@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./scss/main.css";
 
-import idioms from "./data/idioms.json";
+import Parser from "./Parser";
 
 const App = () => {
   const [letter, setLetter] = useState("");
@@ -37,7 +37,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1>Idioms</h1>
+      {/* <h1>Idioms</h1>
       <h2>Choose a letter</h2>
       <div className="letters">
         {alphabet.map((letter) => (
@@ -49,22 +49,8 @@ const App = () => {
             {letter}
           </div>
         ))}
-      </div>
-      <h2>
-        Choosen letter is <b>{letter}</b>
-      </h2>
-      <div className="idioms">
-        {letter === "Z"
-          ? idioms.map((idiom) => (
-              <div className="idiom" key={idiom.name}>
-                <div className="name">
-                  <b>{idiom.name.split("-")[0]}</b> - {idiom.name.split("-")[1]}
-                </div>
-                <div className="example">{idiom.example}</div>
-              </div>
-            ))
-          : ""}
-      </div>
+      </div> */}
+      <Parser />
     </div>
   );
 };
