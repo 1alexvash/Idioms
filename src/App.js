@@ -1,39 +1,39 @@
-import React, { useState } from "react";
+import React from "react";
 import "./scss/main.css";
 
 import Parser from "./Parser";
 
 const App = () => {
-  const [letter, setLetter] = useState("");
+  // const [letter, setLetter] = useState("");
 
-  const alphabet = [
-    "A",
-    "B",
-    "C",
-    "D",
-    "E",
-    "F",
-    "G",
-    "H",
-    "I",
-    "J",
-    "K",
-    "L",
-    "M",
-    "N",
-    "O",
-    "P",
-    "Q",
-    "R",
-    "S",
-    "T",
-    "U",
-    "V",
-    "W",
-    "X",
-    "Y",
-    "Z",
-  ];
+  // const alphabet = [
+  //   "A",
+  //   "B",
+  //   "C",
+  //   "D",
+  //   "E",
+  //   "F",
+  //   "G",
+  //   "H",
+  //   "I",
+  //   "J",
+  //   "K",
+  //   "L",
+  //   "M",
+  //   "N",
+  //   "O",
+  //   "P",
+  //   "Q",
+  //   "R",
+  //   "S",
+  //   "T",
+  //   "U",
+  //   "V",
+  //   "W",
+  //   "X",
+  //   "Y",
+  //   "Z",
+  // ];
 
   return (
     <div className="App">
