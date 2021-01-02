@@ -1,6 +1,13 @@
 @import "reset";
 @import "responsive";
 
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+body,
+button {
+  font-family: "Roboto", sans-serif;
+}
+
 .App {
   width: 320px;
   margin: 0 auto;
@@ -11,11 +18,10 @@
     cursor: pointer;
     width: 100%;
     padding: 8px 20px;
-    border: 2px solid grey;
-    text-shadow: 1px 1px rgba(#777, 0.8);
+    border: 2px solid darken(grey, 15%);
     transition: 0.3s;
     &:hover {
-      background: grey;
+      background: darken(grey, 15%);
       color: white;
     }
   }
