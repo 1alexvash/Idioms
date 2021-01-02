@@ -41,10 +41,13 @@ const App = () => {
 
   function generateIdiom() {
     setAnimate(true);
-    const time = 400 * 200 * Math.round(Math.random() * 3);
+    const time = 400 + 200 * Math.round(Math.random() * 3);
+    const random = Math.floor(Math.random() * idioms.length);
+    const randomIdiom = idioms[random];
+    console.log("randomIdiom:", randomIdiom);
     setTimeout(() => {
       setAnimate(false);
-    }, 2000);
+    }, time);
   }
 
   return (
@@ -52,7 +55,6 @@ const App = () => {
       {/* Alphabet */}
       {/* List of all idioms */}
       {/* Sory by */}
-      {/* Get a random idiom */}
       {animate ? (
         <Spinner />
       ) : (
