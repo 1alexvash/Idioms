@@ -63,10 +63,14 @@ const App = () => {
           Get a Random Idiom
         </button>
       )}
-      <div className="idiom">
-        <div className="name">{idiom.idiom}</div>
-        <div className="meaning">/{idiom.meaning}/</div>
-        <div className="example">{idiom.example}</div>
+      <div className="idioms">
+        {idioms.map((idiom) => (
+          <div className="idiom">
+            <div className="name">{idiom.idiom}</div>
+            <div className="meaning">/{idiom.meaning}/</div>
+            <div className="example">{idiom.example}</div>
+          </div>
+        ))}
       </div>
     </div>
   );
