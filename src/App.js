@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 
+import idioms from "./data/idioms.json";
+
 import Spinner from "./components/Spinner";
 
 import "./scss/main.css";
 
 const App = () => {
   const [letter, setLetter] = useState("");
+  const [animate, setAnimate] = useState(false);
 
   const alphabet = [
     "A",
@@ -37,7 +40,11 @@ const App = () => {
   ];
 
   function generateIdiom() {
-    console.log("His");
+    setAnimate(true);
+    const time = 400 * 200 * Math.round(Math.random() * 3);
+    setTimeout(() => {
+      setAnimate(false);
+    }, 2000);
   }
 
   return (
@@ -46,10 +53,13 @@ const App = () => {
       {/* List of all idioms */}
       {/* Sory by */}
       {/* Get a random idiom */}
-      <button className="generate" onClick={() => generateIdiom()}>
-        Get a Random Idiom
-      </button>
-      <Spinner />
+      {animate ? (
+        <Spinner />
+      ) : (
+        <button className="generate" onClick={() => generateIdiom()}>
+          Get a Random Idiom
+        </button>
+      )}
     </div>
   );
 };
