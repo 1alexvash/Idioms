@@ -4,6 +4,10 @@ import idioms from "./data/idioms.json";
 
 import Spinner from "./components/Spinner";
 
+import List from "./components/List";
+
+import { HashRouter as Router, Route } from "react-router-dom";
+
 import "./scss/main.css";
 
 const App = () => {
@@ -53,25 +57,20 @@ const App = () => {
 
   return (
     <div className="App">
-      {/* Alphabet */}
-      {/* List of all idioms */}
-      {/* Sory by */}
-      {animate ? (
-        <Spinner />
-      ) : (
-        <button className="generate" onClick={() => generateIdiom()}>
-          Get a Random Idiom
-        </button>
-      )}
-      <div className="idioms">
-        {idioms.map((idiom) => (
-          <div className="idiom">
-            <div className="name">{idiom.idiom}</div>
-            <div className="meaning">/{idiom.meaning}/</div>
-            <div className="example">{idiom.example}</div>
-          </div>
-        ))}
-      </div>
+      <Router>
+        {/* Alphabet */}
+        {/* List of all idioms */}
+        {/* Sory by */}
+        {animate ? (
+          <Spinner />
+        ) : (
+          <button className="generate" onClick={() => generateIdiom()}>
+            Get a Random Idiom
+          </button>
+        )}
+
+        <Route path="/" exact component={List} />
+      </Router>
     </div>
   );
 };

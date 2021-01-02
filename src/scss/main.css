@@ -79,6 +79,13 @@ body {
   color: #ededed;
 }
 
+.App .List a {
+  color: white;
+  margin: 10px 0;
+  display: block;
+  border-bottom: 1px solid white;
+}
+
 .spinner {
   display: block;
   position: relative;
