@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+
+import Spinner from "./components/Spinner";
+
 import "./scss/main.css";
 
 const App = () => {
@@ -33,13 +36,20 @@ const App = () => {
     "Z",
   ];
 
+  function generateIdiom() {
+    console.log("His");
+  }
+
   return (
     <div className="App">
       {/* Alphabet */}
       {/* List of all idioms */}
       {/* Sory by */}
       {/* Get a random idiom */}
-      <button className="generate">Get a Random Idiom</button>
+      <button className="generate" onClick={() => generateIdiom()}>
+        Get a Random Idiom
+      </button>
+      <Spinner />
     </div>
   );
 };

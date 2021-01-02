@@ -8,21 +8,28 @@ button {
   font-family: "Roboto", sans-serif;
 }
 
+body {
+  background: black;
+  color: white;
+}
+
 .App {
   width: 320px;
   margin: 0 auto;
   padding: 15px;
   font-size: 20px;
-  box-shadow: 1px 1px 4px rgba(black, 0.5);
+  box-shadow: 1px 1px 10px 1px white;
   .generate {
     cursor: pointer;
     width: 100%;
     padding: 8px 20px;
-    border: 2px solid darken(grey, 15%);
+    border: 2px solid white;
     transition: 0.3s;
     &:hover {
-      background: darken(grey, 15%);
+      background: black;
       color: white;
     }
   }
 }
+
+@import "./components/spinner";
