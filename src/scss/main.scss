@@ -2,50 +2,21 @@
 @import "responsive";
 
 .App {
-  font-family: Arial;
+  width: 320px;
+  margin: 0 auto;
+  padding: 15px;
   font-size: 20px;
-  width: 360px;
-  margin: auto;
-  h1 {
-    font-size: 32px;
-    font-weight: normal;
-  }
-  h2 {
-    margin: 20px 0;
-    font-size: 24px;
-    font-weight: normal;
-  }
-  .letters {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    .letter {
-      cursor: pointer;
-      border: 1px solid black;
-      margin: 8px;
-      padding: 12px;
-      border-radius: 4px;
-      background: linear-gradient(darken(white, 5%), grey);
-    }
-  }
-  .idioms {
-    .idiom {
-      margin: 20px 0;
-      padding: 10px 20px;
-      background: linear-gradient(lighten(lightgrey, 7%), white);
-      box-shadow: 1px 2px 5px rgba(black, 0.8);
-      border-radius: 4px;
-      font-size: 16px;
-      transition: 0.3s;
-      &:hover {
-        box-shadow: 1px 2px 7px rgba(black, 1);
-      }
-      .name {
-        margin-bottom: 10px;
-      }
-      .example {
-        font-style: italic;
-      }
+  box-shadow: 1px 1px 4px rgba(black, 0.5);
+  .generate {
+    cursor: pointer;
+    width: 100%;
+    padding: 8px 20px;
+    border: 2px solid grey;
+    text-shadow: 1px 1px rgba(#777, 0.8);
+    transition: 0.3s;
+    &:hover {
+      background: grey;
+      color: white;
     }
   }
 }

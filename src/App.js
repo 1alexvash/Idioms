@@ -35,19 +35,11 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1>Idioms</h1>
-      <h2>Choose a letter</h2>
-      <div className="letters">
-        {alphabet.map((letter) => (
-          <div
-            className="letter"
-            key={letter}
-            onClick={() => setLetter(letter)}
-          >
-            {letter}
-          </div>
-        ))}
-      </div>
+      {/* Alphabet */}
+      {/* List of all idioms */}
+      {/* Sory by */}
+      {/* Get a random idiom */}
+      <button className="generate">Get a Random Idiom</button>
     </div>
   );
 };
