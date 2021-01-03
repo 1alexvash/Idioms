@@ -19,7 +19,7 @@ body {
   padding: 15px;
   font-size: 20px;
   box-shadow: 1px 1px 10px 1px white;
-  @import "./screens/HomePage";
+  @import "./screens/HomePage/HomePage";
 
   .Idiom {
     border: 1px solid white;
@@ -41,15 +41,7 @@ body {
       color: lighten(lightgray, 10%);
     }
   }
-
-  .List {
-    a {
-      color: white;
-      margin: 10px 0;
-      display: block;
-      border-bottom: 1px solid white;
-    }
-  }
+  @import "./screens/List//List";
 }
 
 @import "./components/spinner";

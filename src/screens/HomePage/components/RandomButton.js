@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 
-import idioms from "../../data/idioms.json";
+import idioms from "../../../data/idioms.json";
 
-import Spinner from "../../components/Spinner";
+import Spinner from "../../../components/Spinner";
 
 const RandomButton = ({ history }) => {
   const [animate, setAnimate] = useState(false);
 
   function generateIdiom() {
     setAnimate(true);
-    const time = 400 + 200 * Math.round(Math.random() * 3);
+    const time = 500 + 250 * Math.round(Math.random() * 4);
     history.push("/");
     setTimeout(() => {
       const random = Math.floor(Math.random() * idioms.length);

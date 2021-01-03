@@ -2,9 +2,9 @@ import React from "react";
 
 import idioms from "./data/idioms.json";
 
-import HomePage from "./screens/HomePage";
+import HomePage from "./screens/HomePage/HomePage";
 
-import List from "./components/List";
+import List from "./screens/List/List";
 
 import { HashRouter as Router, Route } from "react-router-dom";
 

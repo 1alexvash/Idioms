@@ -2,7 +2,7 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
-import idioms from "../data/idioms.json";
+import idioms from "../../data/idioms.json";
 
 const List = () => {
   return (

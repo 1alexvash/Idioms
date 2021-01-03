@@ -1,0 +1,12 @@
+.List {
+  a {
+    color: white;
+    margin: 10px 0;
+    display: block;
+    border-bottom: 1px solid white;
+    transition: 0.3s;
+    &:hover {
+      color: deepskyblue;
+    }
+  }
+}

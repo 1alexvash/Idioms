@@ -190,6 +190,12 @@ body {
   margin: 10px 0;
   display: block;
   border-bottom: 1px solid white;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.App .List a:hover {
+  color: deepskyblue;
 }
 
 .spinner {
