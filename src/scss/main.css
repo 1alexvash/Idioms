@@ -40,23 +40,7 @@ body {
           box-shadow: 1px 1px 10px 1px white;
 }
 
-.App .Random-Button {
-  margin: 20px 0;
-  cursor: pointer;
-  width: 100%;
-  padding: 8px 20px;
-  border: 2px solid black;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.App .Random-Button:hover {
-  background: black;
-  color: white;
-  border: 2px solid white;
-}
-
-.App .app-title {
+.App .HomePage .title {
   text-align: center;
   font-size: 48px;
   font-weight: normal;
@@ -65,13 +49,48 @@ body {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  -webkit-animation: 1.5s showTitle;
+          animation: 1.5s showTitle;
 }
 
-.App .app-title a {
+@-webkit-keyframes showTitle {
+  from {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes showTitle {
+  from {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.App .HomePage .title a {
   color: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
-.App .Alphabet {
+.App .HomePage .title a:hover:not(.active) {
+  color: deepskyblue;
+}
+
+.App .HomePage .title a.active {
+  color: deepskyblue;
+  cursor: default;
+}
+
+.App .HomePage .alphabet {
   margin: 15px 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -83,12 +102,12 @@ body {
           justify-content: space-between;
 }
 
-.App .Alphabet .box {
+.App .HomePage .alphabet .box {
   width: 16.7%;
   text-align: center;
 }
 
-.App .Alphabet .box .letter {
+.App .HomePage .alphabet .box .letter {
   cursor: pointer;
   font-size: 20px;
   margin: 5px;
@@ -97,11 +116,49 @@ body {
   transition: 0.3s;
 }
 
-.App .Alphabet .box .letter:hover {
+.App .HomePage .alphabet .box .letter:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
   background: deepskyblue;
   border-color: black;
+}
+
+.App .HomePage .list {
+  text-align: center;
+}
+
+.App .HomePage .list a {
+  color: white;
+  font-family: cursive;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.App .HomePage .list a:hover, .App .HomePage .list a.active {
+  display: block;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  color: deepskyblue;
+}
+
+.App .HomePage .list a.active {
+  cursor: default;
+}
+
+.App .HomePage .random-Button {
+  margin: 20px 0;
+  cursor: pointer;
+  width: 100%;
+  padding: 8px 20px;
+  border: 2px solid black;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.App .HomePage .random-Button:hover {
+  background: black;
+  color: white;
+  border: 2px solid white;
 }
 
 .App .Idiom {
@@ -145,7 +202,7 @@ body {
 
 .spinner div {
   position: absolute;
-  border: 6px solid #fff;
+  border: 6px solid deepskyblue;
   opacity: 1;
   border-radius: 50%;
   -webkit-animation: spinner 1.5s cubic-bezier(0, 0.2, 0.8, 1) infinite;

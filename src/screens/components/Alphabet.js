@@ -31,9 +31,9 @@ const Alphabet = () => {
   ];
 
   return (
-    <div className="Alphabet">
+    <div className="alphabet">
       {alphabet.map((letter) => (
-        <div className="box">
+        <div className="box" key={letter}>
           <div className="letter">{letter}</div>
         </div>
       ))}

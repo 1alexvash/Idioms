@@ -8,7 +8,7 @@ const List = () => {
   return (
     <div className="List">
       {idioms.map((idiom) => (
-        <div className="idiom">
+        <div className="idiom" key={idiom.idiom}>
           <Link to={`idiom/${idiom.idiom}`}>{idiom.idiom}</Link>
         </div>
       ))}

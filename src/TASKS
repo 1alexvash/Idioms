@@ -1,3 +1,6 @@
-Use slug to render proper url
-And use slug to decode and get normal link
-Render idiom after it
+Combine components into a homeworks screen
+sort components after it
+soft scss files after it
+
+make clicking on the letters work
+create a separate component for individual letter

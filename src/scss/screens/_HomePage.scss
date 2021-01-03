@@ -1,0 +1,81 @@
+.HomePage {
+  .title {
+    text-align: center;
+    font-size: 48px;
+    font-weight: normal;
+    font-family: cursive;
+    user-select: none;
+    animation: 1.5s showTitle;
+    @keyframes showTitle {
+      from {
+        transform: scale(0.5);
+      }
+      to {
+        transform: scale(1);
+      }
+    }
+    a {
+      color: white;
+      transition: 0.5s;
+      &:hover:not(.active) {
+        color: deepskyblue;
+      }
+      &.active {
+        color: deepskyblue;
+        cursor: default;
+      }
+    }
+  }
+  .alphabet {
+    margin: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .box {
+      width: 16.7%;
+      text-align: center;
+      .letter {
+        cursor: pointer;
+        font-size: 20px;
+        margin: 5px;
+        border: 1px solid white;
+        transition: 0.3s;
+        &:hover {
+          transform: scale(1.2);
+          background: deepskyblue;
+          border-color: black;
+        }
+      }
+    }
+  }
+  .list {
+    text-align: center;
+    a {
+      color: white;
+      font-family: cursive;
+      transition: 0.5s;
+      &:hover,
+      &.active {
+        display: block;
+        transform: scale(1.2);
+        color: deepskyblue;
+      }
+      &.active {
+        cursor: default;
+      }
+    }
+  }
+  .random-Button {
+    margin: 20px 0;
+    cursor: pointer;
+    width: 100%;
+    padding: 8px 20px;
+    border: 2px solid black;
+    transition: 0.3s;
+    &:hover {
+      background: black;
+      color: white;
+      border: 2px solid white;
+    }
+  }
+}

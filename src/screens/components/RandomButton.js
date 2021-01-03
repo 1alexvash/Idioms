@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
-import idioms from "../data/idioms.json";
+import idioms from "../../data/idioms.json";
 
-import Spinner from "../components/Spinner";
+import Spinner from "../../components/Spinner";
 
 const RandomButton = ({ history }) => {
   const [animate, setAnimate] = useState(false);
@@ -14,7 +14,6 @@ const RandomButton = ({ history }) => {
     setTimeout(() => {
       const random = Math.floor(Math.random() * idioms.length);
       const randomIdiom = idioms[random];
-      console.log("randomIdiom:", randomIdiom.idiom);
 
       history.push(`/idiom/${randomIdiom.idiom}`);
       setAnimate(false);
@@ -24,7 +23,7 @@ const RandomButton = ({ history }) => {
   return animate ? (
     <Spinner />
   ) : (
-    <button className="Random-Button" onClick={() => generateIdiom()}>
+    <button className="random-Button" onClick={() => generateIdiom()}>
       Get a Random Idiom
     </button>
   );
