@@ -21,8 +21,6 @@ const App = () => {
 
     // I need to replace ? with an empty space in order to avoid mistakes
     const idiom = idioms.find((idiom) => idiom.idiom.replace("?", "") === name);
-    console.log("idioms:", idioms);
-    console.log("idiom:", idiom);
 
     return (
       <div className="Idiom">
@@ -36,7 +34,9 @@ const App = () => {
   return (
     <div className="App">
       <Router>
-        <h1 className="app-title">Idioms</h1>
+        <h1 className="app-title">
+          <Link to="/">Idioms</Link>
+        </h1>
         <Link to={"/list"}>List of all idioms</Link>
         <Route path="/" component={Alphabet} />
         <Route path="/" component={RandomButton} />

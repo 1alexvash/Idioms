@@ -26,6 +26,9 @@ body {
     font-weight: normal;
     font-family: cursive;
     user-select: none;
+    a {
+      color: white;
+    }
   }
   @import "./components/Alphabet";
   .Idiom {
