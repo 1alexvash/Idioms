@@ -2,7 +2,7 @@ import React from "react";
 
 import HomeScreen from "./screens/HomeScreen/HomeScreen";
 import ListScreen from "./screens/ListScreen/ListScreen";
-import IdiomOnLetter from "./screens/IdiomOnLetter/IdiomOnLetter";
+import IdiomOnLetterScreen from "./screens/IdiomOnLetterScreen/IdiomOnLetterScreen";
 import IdiomScreen from "./screens/IdiomScreen/IdiomScreen";
 
 import { HashRouter as Router, Route } from "react-router-dom";
@@ -14,7 +14,11 @@ const App = () => (
     <Router>
       <Route path="" component={HomeScreen} />
       <Route path="/list" exact component={ListScreen} />
-      <Route path="/idiom-on-letter/:letter" exact component={IdiomOnLetter} />
+      <Route
+        path="/idiom-on-letter/:letter"
+        exact
+        component={IdiomOnLetterScreen}
+      />
       <Route path="/idiom/:name" exact component={IdiomScreen} />
     </Router>
   </div>

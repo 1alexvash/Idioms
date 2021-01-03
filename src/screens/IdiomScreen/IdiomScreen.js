@@ -10,7 +10,11 @@ const IdiomScreen = ({ match }) => {
   // I need to replace ? with an empty space in order to avoid mistakes
   const idiom = idioms.find((idiom) => idiom.idiom.replace("?", "") === name);
 
-  return <Idiom idiom={idiom} />;
+  return (
+    <div className="IdiomScreen">
+      <Idiom idiom={idiom} />
+    </div>
+  );
 };
 
 export default IdiomScreen;

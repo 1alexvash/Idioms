@@ -181,7 +181,7 @@ body {
 .Idiom {
   border: 1px solid white;
   font-size: 16px;
-  margin: 10px 0;
+  margin: 20px 0;
   padding: 10px;
 }
 
@@ -200,6 +200,10 @@ body {
 
 .Idiom .example {
   color: #ededed;
+}
+
+.Idiom:first-of-type {
+  margin-top: 0;
 }
 
 .spinner {
