@@ -2,74 +2,46 @@ import React, { useState } from "react";
 
 import idioms from "./data/idioms.json";
 
-import Spinner from "./components/Spinner";
+import Alphabet from "./components/Alphabet";
+import RandomButton from "./components/RandomButton";
 
 import List from "./components/List";
 
-import { HashRouter as Router, Route } from "react-router-dom";
+import { HashRouter as Router, Route, Link } from "react-router-dom";
 
 import "./scss/main.css";
 
 const App = () => {
   const [letter, setLetter] = useState("");
-  const [animate, setAnimate] = useState(false);
+
   const [idiom, setIdiom] = useState({});
 
-  const alphabet = [
-    "A",
-    "B",
-    "C",
-    "D",
-    "E",
-    "F",
-    "G",
-    "H",
-    "I",
-    "J",
-    "K",
-    "L",
-    "M",
-    "N",
-    "O",
-    "P",
-    "Q",
-    "R",
-    "S",
-    "T",
-    "U",
-    "V",
-    "W",
-    "X",
-    "Y",
-    "Z",
-  ];
+  const Idiom = ({ match }) => {
+    const name = match.params.name;
 
-  function generateIdiom() {
-    setAnimate(true);
-    const time = 400 + 200 * Math.round(Math.random() * 3);
-    setTimeout(() => {
-      const random = Math.floor(Math.random() * idioms.length);
-      const randomIdiom = idioms[random];
-      setIdiom(randomIdiom);
-      setAnimate(false);
-    }, time);
-  }
+    // I need to replace ? with an empty space in order to avoid mistakes
+    const idiom = idioms.find((idiom) => idiom.idiom.replace("?", "") === name);
+    console.log("idioms:", idioms);
+    console.log("idiom:", idiom);
+
+    return (
+      <div className="Idiom">
+        <div className="name">{idiom.idiom}</div>
+        <div className="meaning">{idiom.meaning}</div>
+        <div className="example">{idiom.example}</div>
+      </div>
+    );
+  };
 
   return (
     <div className="App">
       <Router>
-        {/* Alphabet */}
-        {/* List of all idioms */}
-        {/* Sory by */}
-        {animate ? (
-          <Spinner />
-        ) : (
-          <button className="generate" onClick={() => generateIdiom()}>
-            Get a Random Idiom
-          </button>
-        )}
-
-        <Route path="/" exact component={List} />
+        <h1 className="app-title">Idioms</h1>
+        <Link to={"/list"}>List of all idioms</Link>
+        <Route path="/" component={Alphabet} />
+        <Route path="/" component={RandomButton} />
+        <Route path="/list" exact component={List} />
+        <Route path="/idiom/:name" exact component={Idiom} />
       </Router>
     </div>
   );

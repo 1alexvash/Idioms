@@ -40,7 +40,8 @@ body {
           box-shadow: 1px 1px 10px 1px white;
 }
 
-.App .generate {
+.App .Random-Button {
+  margin: 20px 0;
   cursor: pointer;
   width: 100%;
   padding: 8px 20px;
@@ -49,25 +50,69 @@ body {
   transition: 0.3s;
 }
 
-.App .generate:hover {
+.App .Random-Button:hover {
   background: black;
   color: white;
   border: 2px solid white;
 }
 
-.App .idioms .idiom {
+.App .app-title {
+  text-align: center;
+  font-size: 48px;
+  font-weight: normal;
+  font-family: cursive;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.App .Alphabet {
+  margin: 15px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.App .Alphabet .box {
+  width: 16.7%;
+  text-align: center;
+}
+
+.App .Alphabet .box .letter {
+  cursor: pointer;
+  font-size: 20px;
+  margin: 5px;
+  border: 1px solid white;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.App .Alphabet .box .letter:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  background: deepskyblue;
+  border-color: black;
+}
+
+.App .Idiom {
   border: 1px solid white;
   font-size: 16px;
   margin: 10px 0;
   padding: 10px;
 }
 
-.App .idioms .idiom .name {
+.App .Idiom .name {
   font-weight: bold;
   font-size: 18px;
 }
 
-.App .idioms .idiom .meaning {
+.App .Idiom .meaning {
   margin-top: 8px;
   margin-bottom: 12px;
   font-style: italic;
@@ -75,7 +120,7 @@ body {
   color: #e0e0e0;
 }
 
-.App .idioms .idiom .example {
+.App .Idiom .example {
   color: #ededed;
 }
 

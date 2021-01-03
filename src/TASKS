@@ -1,1 +1,3 @@
-Add some font for the project
+Use slug to render proper url
+And use slug to decode and get normal link
+Render idiom after it
