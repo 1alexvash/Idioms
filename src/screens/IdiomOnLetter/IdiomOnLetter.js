@@ -1,4 +1,5 @@
 import React from "react";
+import idioms from "../../data/idioms.json";
 
 const IdiomOnLetter = ({ match }) => {
   const { letter } = match.params;
