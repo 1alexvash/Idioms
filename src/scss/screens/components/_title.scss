@@ -1,0 +1,27 @@
+.title {
+  text-align: center;
+  font-size: 48px;
+  font-weight: normal;
+  font-family: cursive;
+  user-select: none;
+  animation: 1.5s showTitle;
+  @keyframes showTitle {
+    from {
+      transform: scale(0.5);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  a {
+    color: white;
+    transition: 0.5s;
+    &:hover:not(.active) {
+      color: deepskyblue;
+    }
+    &.active {
+      color: deepskyblue;
+      cursor: default;
+    }
+  }
+}

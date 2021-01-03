@@ -1,0 +1,17 @@
+.list {
+  text-align: center;
+  a {
+    color: white;
+    font-family: cursive;
+    transition: 0.5s;
+    &:hover,
+    &.active {
+      display: block;
+      transform: scale(1.2);
+      color: deepskyblue;
+    }
+    &.active {
+      cursor: default;
+    }
+  }
+}
