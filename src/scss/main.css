@@ -108,6 +108,10 @@ body {
 }
 
 .App .HomeScreen .alphabet .box .letter {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   cursor: pointer;
   font-size: 20px;
   margin: 5px;

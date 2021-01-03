@@ -13,6 +13,7 @@ const App = () => (
     <Router>
       <Route path="" component={HomeScreen} />
       <Route path="/list" exact component={ListScreen} />
+      {/* <Route path="/idiom-on-letter/:letter" exact component={IdiomScreen} /> */}
       <Route path="/idiom/:name" exact component={IdiomScreen} />
     </Router>
   </div>

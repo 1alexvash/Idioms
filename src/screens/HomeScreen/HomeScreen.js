@@ -8,7 +8,7 @@ import RandomButton from "./components/RandomButton";
 const HomeScreen = ({ history }) => (
   <div className="HomeScreen">
     <Title />
-    <Alphabet />
+    <Alphabet history={history} />
     <List />
     <RandomButton history={history} />
   </div>
