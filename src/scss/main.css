@@ -108,10 +108,12 @@ body {
 }
 
 .App .HomeScreen .alphabet .box .letter {
+  display: block;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  color: white;
   cursor: pointer;
   font-size: 20px;
   margin: 5px;
@@ -125,6 +127,10 @@ body {
           transform: scale(1.2);
   background: deepskyblue;
   border-color: black;
+}
+
+.App .HomeScreen .alphabet .box .letter.active {
+  background: deepskyblue;
 }
 
 .App .HomeScreen .list {
