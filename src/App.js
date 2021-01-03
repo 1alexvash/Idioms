@@ -1,40 +1,21 @@
 import React from "react";
 
-import idioms from "./data/idioms.json";
-
-import HomePage from "./screens/HomePage/HomePage";
-
-import List from "./screens/List/List";
+import HomeScreen from "./screens/HomeScreen/HomeScreen";
+import ListScreen from "./screens/ListScreen/ListScreen";
+import IdiomScreen from "./screens/IdiomScreen/IdiomScreen";
 
 import { HashRouter as Router, Route } from "react-router-dom";
 
 import "./scss/main.css";
 
-const App = () => {
-  const Idiom = ({ match }) => {
-    const name = match.params.name;
-
-    // I need to replace ? with an empty space in order to avoid mistakes
-    const idiom = idioms.find((idiom) => idiom.idiom.replace("?", "") === name);
-
-    return (
-      <div className="Idiom">
-        <div className="name">{idiom.idiom}</div>
-        <div className="meaning">{idiom.meaning}</div>
-        <div className="example">{idiom.example}</div>
-      </div>
-    );
-  };
-
-  return (
-    <div className="App">
-      <Router>
-        <Route path="" component={HomePage} />
-        <Route path="/list" exact component={List} />
-        <Route path="/idiom/:name" exact component={Idiom} />
-      </Router>
-    </div>
-  );
-};
+const App = () => (
+  <div className="App">
+    <Router>
+      <Route path="" component={HomeScreen} />
+      <Route path="/list" exact component={ListScreen} />
+      <Route path="/idiom/:name" exact component={IdiomScreen} />
+    </Router>
+  </div>
+);
 
 export default App;

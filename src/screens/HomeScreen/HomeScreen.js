@@ -5,8 +5,8 @@ import Alphabet from "./components/Alphabet";
 import List from "./components/List";
 import RandomButton from "./components/RandomButton";
 
-const HomePage = ({ history }) => (
-  <div className="HomePage">
+const HomeScreen = ({ history }) => (
+  <div className="HomeScreen">
     <Title />
     <Alphabet />
     <List />
@@ -14,4 +14,4 @@ const HomePage = ({ history }) => (
   </div>
 );
 
-export default HomePage;
+export default HomeScreen;

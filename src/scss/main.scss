@@ -19,29 +19,9 @@ body {
   padding: 15px;
   font-size: 20px;
   box-shadow: 1px 1px 10px 1px white;
-  @import "./screens/HomePage/HomePage";
-
-  .Idiom {
-    border: 1px solid white;
-    font-size: 16px;
-    margin: 10px 0;
-    padding: 10px;
-    .name {
-      font-weight: bold;
-      font-size: 18px;
-    }
-    .meaning {
-      margin-top: 8px;
-      margin-bottom: 12px;
-      font-style: italic;
-      font-size: 15px;
-      color: lighten(lightgray, 5%);
-    }
-    .example {
-      color: lighten(lightgray, 10%);
-    }
-  }
-  @import "./screens/List//List";
+  @import "./screens/HomeScreen/HomeScreen";
+  @import "./screens/ListScreen/ListScreen";
+  @import "./screens/IdiomScreen/IdiomScreen";
 }
 
 @import "./components/spinner";

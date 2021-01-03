@@ -40,7 +40,7 @@ body {
           box-shadow: 1px 1px 10px 1px white;
 }
 
-.App .HomePage .title {
+.App .HomeScreen .title {
   text-align: center;
   font-size: 48px;
   font-weight: normal;
@@ -75,22 +75,22 @@ body {
   }
 }
 
-.App .HomePage .title a {
+.App .HomeScreen .title a {
   color: white;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-.App .HomePage .title a:hover:not(.active) {
+.App .HomeScreen .title a:hover:not(.active) {
   color: deepskyblue;
 }
 
-.App .HomePage .title a.active {
+.App .HomeScreen .title a.active {
   color: deepskyblue;
   cursor: default;
 }
 
-.App .HomePage .alphabet {
+.App .HomeScreen .alphabet {
   margin: 15px 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -102,12 +102,12 @@ body {
           justify-content: space-between;
 }
 
-.App .HomePage .alphabet .box {
+.App .HomeScreen .alphabet .box {
   width: 16.7%;
   text-align: center;
 }
 
-.App .HomePage .alphabet .box .letter {
+.App .HomeScreen .alphabet .box .letter {
   cursor: pointer;
   font-size: 20px;
   margin: 5px;
@@ -116,36 +116,36 @@ body {
   transition: 0.3s;
 }
 
-.App .HomePage .alphabet .box .letter:hover {
+.App .HomeScreen .alphabet .box .letter:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
   background: deepskyblue;
   border-color: black;
 }
 
-.App .HomePage .list {
+.App .HomeScreen .list {
   text-align: center;
 }
 
-.App .HomePage .list a {
+.App .HomeScreen .list a {
   color: white;
   font-family: cursive;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-.App .HomePage .list a:hover, .App .HomePage .list a.active {
+.App .HomeScreen .list a:hover, .App .HomeScreen .list a.active {
   display: block;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
   color: deepskyblue;
 }
 
-.App .HomePage .list a.active {
+.App .HomeScreen .list a.active {
   cursor: default;
 }
 
-.App .HomePage .random-Button {
+.App .HomeScreen .random-Button {
   margin: 20px 0;
   cursor: pointer;
   width: 100%;
@@ -155,37 +155,13 @@ body {
   transition: 0.3s;
 }
 
-.App .HomePage .random-Button:hover {
+.App .HomeScreen .random-Button:hover {
   background: black;
   color: white;
   border: 2px solid white;
 }
 
-.App .Idiom {
-  border: 1px solid white;
-  font-size: 16px;
-  margin: 10px 0;
-  padding: 10px;
-}
-
-.App .Idiom .name {
-  font-weight: bold;
-  font-size: 18px;
-}
-
-.App .Idiom .meaning {
-  margin-top: 8px;
-  margin-bottom: 12px;
-  font-style: italic;
-  font-size: 15px;
-  color: #e0e0e0;
-}
-
-.App .Idiom .example {
-  color: #ededed;
-}
-
-.App .List a {
+.App .ListScreen a {
   color: white;
   margin: 10px 0;
   display: block;
@@ -194,8 +170,32 @@ body {
   transition: 0.3s;
 }
 
-.App .List a:hover {
+.App .ListScreen a:hover {
   color: deepskyblue;
+}
+
+.App .IdiomScreen {
+  border: 1px solid white;
+  font-size: 16px;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.App .IdiomScreen .name {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.App .IdiomScreen .meaning {
+  margin-top: 8px;
+  margin-bottom: 12px;
+  font-style: italic;
+  font-size: 15px;
+  color: #e0e0e0;
+}
+
+.App .IdiomScreen .example {
+  color: #ededed;
 }
 
 .spinner {
