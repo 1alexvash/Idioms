@@ -15,6 +15,15 @@
       margin: 5px;
       border: 1px solid white;
       transition: 0.3s;
+      animation: popLetter 1s;
+      @keyframes popLetter {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
       &:hover {
         transform: scale(1.2);
         background: deepskyblue;

@@ -1,35 +1,46 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
+const fullAlphabet = [
+  "A",
+  "B",
+  "C",
+  "D",
+  "E",
+  "F",
+  "G",
+  "H",
+  "I",
+  "J",
+  "K",
+  "L",
+  "M",
+  "N",
+  "O",
+  "P",
+  "Q",
+  "R",
+  "S",
+  "T",
+  "U",
+  "V",
+  "W",
+  "X",
+  "Y",
+  "Z",
+];
+
 const Alphabet = ({ history }) => {
-  const alphabet = [
-    "A",
-    "B",
-    "C",
-    "D",
-    "E",
-    "F",
-    "G",
-    "H",
-    "I",
-    "J",
-    "K",
-    "L",
-    "M",
-    "N",
-    "O",
-    "P",
-    "Q",
-    "R",
-    "S",
-    "T",
-    "U",
-    "V",
-    "W",
-    "X",
-    "Y",
-    "Z",
-  ];
+  const [alphabet, setAlphabet] = useState([]);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      if (alphabet.length < fullAlphabet.length) {
+        setAlphabet([...alphabet, fullAlphabet[alphabet.length]]);
+      }
+    }, 350);
+    return () => clearInterval(timer);
+  }, [alphabet]);
 
   return (
     <div className="alphabet">

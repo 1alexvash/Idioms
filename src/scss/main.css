@@ -126,6 +126,26 @@ body {
   border: 1px solid white;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  -webkit-animation: popLetter 1s;
+          animation: popLetter 1s;
+}
+
+@-webkit-keyframes popLetter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes popLetter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .App .HomeScreen .alphabet .box .letter:hover {
