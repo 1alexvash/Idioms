@@ -40,6 +40,12 @@ body {
           box-shadow: 1px 1px 10px 1px white;
 }
 
+@media (max-width: 360px) {
+  .App {
+    width: 100%;
+  }
+}
+
 .App .HomeScreen .title {
   text-align: center;
   font-size: 48px;

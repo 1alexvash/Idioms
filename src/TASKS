@@ -1,8 +1,1 @@
-make clicking on the letters work
-create a separate component for individual letter
-
 Add animation to gradually add letters with a 0.5 second delay
-
-Create github repository
-Add gh-pages
-Try to deploy
