@@ -38,7 +38,7 @@ const Alphabet = ({ history }) => {
       if (alphabet.length < fullAlphabet.length) {
         setAlphabet([...alphabet, fullAlphabet[alphabet.length]]);
       }
-    }, 350);
+    }, 250);
     return () => clearInterval(timer);
   }, [alphabet]);
 

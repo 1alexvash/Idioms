@@ -126,8 +126,8 @@ body {
   border: 1px solid white;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  -webkit-animation: popLetter 1s;
-          animation: popLetter 1s;
+  -webkit-animation: popLetter 2s;
+          animation: popLetter 2s;
 }
 
 @-webkit-keyframes popLetter {
