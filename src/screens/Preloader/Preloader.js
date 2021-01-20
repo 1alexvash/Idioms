@@ -5,8 +5,10 @@ const Preloader = () => {
   const showPreloader = localStorage.isPageLoaded ? false : true;
 
   setTimeout(() => {
-    localStorage.isPageLoaded = true;
-    window.location.reload();
+    if (localStorage.isPageLoaded === undefined) {
+      localStorage.isPageLoaded = true;
+      window.location.reload();
+    }
   }, 5000);
 
   if (showPreloader) {
