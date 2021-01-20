@@ -46,7 +46,91 @@ body {
   }
 }
 
-.App .HomeScreen .title {
+.Preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: black;
+}
+
+.Preloader .logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 512px;
+  height: 512px;
+  background: blue;
+  background-size: cover;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-animation: 3.5s zoomLogo;
+          animation: 3.5s zoomLogo;
+}
+
+@-webkit-keyframes zoomLogo {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomLogo {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 540px) {
+  .Preloader .logo {
+    width: 100%;
+    padding-top: 100%;
+    height: auto;
+  }
+}
+
+.Preloader .progress {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1%;
+  background: lightgrey;
+}
+
+.Preloader .progress .bar {
+  height: 100%;
+  width: 100%;
+  background: #0089de;
+  -webkit-animation: ease-in 4.5s progress;
+          animation: ease-in 4.5s progress;
+}
+
+@-webkit-keyframes progress {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes progress {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.HomeScreen .title {
   text-align: center;
   font-size: 48px;
   font-weight: normal;
@@ -81,22 +165,22 @@ body {
   }
 }
 
-.App .HomeScreen .title a {
+.HomeScreen .title a {
   color: white;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-.App .HomeScreen .title a:hover:not(.active) {
+.HomeScreen .title a:hover:not(.active) {
   color: deepskyblue;
 }
 
-.App .HomeScreen .title a.active {
+.HomeScreen .title a.active {
   color: deepskyblue;
   cursor: default;
 }
 
-.App .HomeScreen .alphabet {
+.HomeScreen .alphabet {
   margin: 15px 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -108,12 +192,12 @@ body {
           justify-content: space-between;
 }
 
-.App .HomeScreen .alphabet .box {
+.HomeScreen .alphabet .box {
   width: 16.7%;
   text-align: center;
 }
 
-.App .HomeScreen .alphabet .box .letter {
+.HomeScreen .alphabet .box .letter {
   display: block;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -148,40 +232,40 @@ body {
   }
 }
 
-.App .HomeScreen .alphabet .box .letter:hover {
+.HomeScreen .alphabet .box .letter:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
   background: deepskyblue;
   border-color: black;
 }
 
-.App .HomeScreen .alphabet .box .letter.active {
+.HomeScreen .alphabet .box .letter.active {
   background: deepskyblue;
 }
 
-.App .HomeScreen .list {
+.HomeScreen .list {
   text-align: center;
 }
 
-.App .HomeScreen .list a {
+.HomeScreen .list a {
   color: white;
   font-family: cursive;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-.App .HomeScreen .list a:hover, .App .HomeScreen .list a.active {
+.HomeScreen .list a:hover, .HomeScreen .list a.active {
   display: block;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
   color: deepskyblue;
 }
 
-.App .HomeScreen .list a.active {
+.HomeScreen .list a.active {
   cursor: default;
 }
 
-.App .HomeScreen .random-Button {
+.HomeScreen .random-Button {
   margin: 20px 0;
   cursor: pointer;
   width: 100%;
@@ -191,13 +275,13 @@ body {
   transition: 0.3s;
 }
 
-.App .HomeScreen .random-Button:hover {
+.HomeScreen .random-Button:hover {
   background: black;
   color: white;
   border: 2px solid white;
 }
 
-.App .ListScreen a {
+.ListScreen a {
   color: white;
   margin: 10px 0;
   display: block;
@@ -206,7 +290,7 @@ body {
   transition: 0.3s;
 }
 
-.App .ListScreen a:hover {
+.ListScreen a:hover {
   color: deepskyblue;
 }
 

@@ -22,9 +22,11 @@ body {
   @include responsive(360px) {
     width: 100%;
   }
-  @import "./screens/HomeScreen/HomeScreen";
-  @import "./screens/ListScreen/ListScreen";
 }
+
+@import "./screens/Preloader/Preloader";
+@import "./screens/HomeScreen/HomeScreen";
+@import "./screens/ListScreen/ListScreen";
 
 @import "./components/Idiom";
 @import "./components/spinner";

@@ -1,5 +1,6 @@
 import React from "react";
 
+import Preloader from "./screens/Preloader/Preloader";
 import HomeScreen from "./screens/HomeScreen/HomeScreen";
 import ListScreen from "./screens/ListScreen/ListScreen";
 import IdiomOnLetterScreen from "./screens/IdiomOnLetterScreen/IdiomOnLetterScreen";
@@ -12,7 +13,8 @@ import "./scss/main.css";
 const App = () => (
   <div className="App">
     <Router>
-      <Route path="" component={HomeScreen} />
+      <Route path="/" component={Preloader} />
+      <Route path="/" component={HomeScreen} />
       <Route path="/list" exact component={ListScreen} />
       <Route
         path="/idiom-on-letter/:letter"

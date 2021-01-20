@@ -1,0 +1,54 @@
+.Preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: black;
+  .logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 512px;
+    height: 512px;
+    background: blue;
+    background-size: cover;
+    transform: translate(-50%, -50%);
+    animation: 3.5s zoomLogo;
+    @keyframes zoomLogo {
+      from {
+        opacity: 0.2;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    @include responsive(540px) {
+      width: 100%;
+      padding-top: 100%;
+      height: auto;
+    }
+  }
+  .progress {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1%;
+    background: lightgrey;
+    .bar {
+      height: 100%;
+      width: 100%;
+      background: #0089de;
+      animation: ease-in 4.5s progress;
+      @keyframes progress {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
